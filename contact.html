@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<!-- Basic Page Needs -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>琉球エリスリナビーチサッカーチーム</title>
+<meta name="discription" content="沖縄県のアラハビーチ（北谷町）をホームビーチとして活動しているビーチサッカーチーム・琉球エリスリナのサイトです。">
+<meta name="keywords" content="ビーチサッカー, ビーチ, サッカー, 沖縄, 北谷, アラハビーチ">
+
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body class="contact_page">
+<!--ヘッダー-->
+<header>
+    <div class="container">
+      <div class="header-left">
+        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="チームロゴ"></a></div>
+        <div class="logo_txt">Beach Soccer Team<br>
+          <span>Ryukyu Erythrina</span></div>
+      </div>
+
+      <!-- SPメニューアイコン -->
+      <span class="fa fa-bars menu-icon sp_menu_btn"></span>
+
+      <div class="sp_menu"></div>
+      <ul class="sp_menu_li">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="team.html">TEAM</a></li>
+        <li><a href="player.html">PLAYER</a></li>
+        <li><a href="sponsor.html">SPONSOR</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="https://www.facebook.com/beachsoccerclub.okinawa/">FACEBOOK</a></li>
+        <li><a href="https://www.instagram.com/ryukyuerythrina/">INSTAGRAM</a></li>
+      </ul>
+
+      <!-- PCメニュー -->
+      <div class="header-right pc_menu">
+        <a href="team.html">TEAM</a>
+        <a href="player.html">PLAYER</a>
+        <a href="sponsor.html">SPONSOR</a>
+        <a href="contact.html" class="fa fa-envelope"></a>
+        <a href="https://www.facebook.com/beachsoccerclub.okinawa/" class="fa fa-facebook-square"></a>
+        <a href="https://www.instagram.com/ryukyuerythrina/" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  </header>
+       <!--メインエリア-->                 
+    　<div id="contact">
+      <form class="mailForm" action="mail.php" method="post">
+       <dl>
+         <dt>お名前</dt>
+         <dd>
+           <input name="name" type="text" required="required" id="name" class="text_box">
+         </dd>
+
+         <dt>メールアドレス</dt>
+         <dd>
+           <input name="email" type="email" required="required" id="email" class="text_box">
+         </dd>
+
+         <dt>お問い合わせ内容</dt>
+         <dd>
+           <textarea name="content" required="required" id="content" class="text_box"></textarea>
+         </dd>
+         <input type="hidden" id="token" name="token" value="1234567"/>
+       </dl>
+
+       <p id="submit_button_cover">
+         <input name="submit_buton" type="submit" id="submit_button" value="送信">
+       </p>
+  </form></div>
+
+    <!-- フッターエリア -->
+    <footer>
+        <div id="pagetop">
+            <a href="index.html">TOP</a>
+          </div>
+            <!-- <div class="container"> -->
+              <div class="copyright">copyright©2020 RYUKYU ERYTHRINA all rights reserved.</div>
+            <!-- </div> -->
+    </footer>
+    <!--footer -->
+
+    <!-- jQuery
+  ----------------------------------------------------->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+
+  <!-- Owl Carousel JS 
+----------------------------------------------------->
+  <script src="js/carousel/owl.carousel.min.js"></script>
+
+  <!-- Owl Carouselを動作させるために追加 -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,759 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  /* ルートのフォントサイズを10pxに設定しておく */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  font-family: "Noto Sans Japanese","Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  padding: 50px 0px 30px 0px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+
+.container {
+  padding: 0px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 550px) {
+  .container {
+    max-width: 1440px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 549px) {
+  .pc {
+    display: none;
+  }
+}
+
+@media (min-width: 550px) {
+  .sp {
+    display: none;
+  }
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  color: white;
+  background-color: rgba(34, 49, 52, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header .header-left {
+  float: left;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-left .logo img {
+  height: 60px;
+  text-align: center;
+}
+
+header .header-left .logo_txt {
+  margin-top: 13px;
+  margin-left: 10px;
+  opacity: 0.8;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+header .header-left .logo_txt span {
+  font-size: 15px;
+}
+
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 4rem;
+  padding: 12px 0;
+  padding-right: 30px;
+}
+
+.sp_menu_li {
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  margin: 0;
+  padding: 10px;
+  background-color: black;
+  display: none;
+  z-index: 100;
+}
+
+.sp_menu_li li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.sp_menu_li li a {
+  display: block;
+  color: white;
+  font-size: 1.8rem;
+  padding: 10px;
+}
+
+.sp_menu_li li:last-child {
+  border-bottom: none;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  font-size: 1.6rem;
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+}
+
+@media (min-width: 550px) {
+  header .menu-icon {
+    display: none;
+  }
+  header .header-right {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 10px;
+  }
+  header .header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    display: block;
+    float: left;
+  }
+  header .header-right a:hover {
+    color: #EC7E2F;
+  }
+}
+
+@media (max-width: 549px) {
+  header .pc_menu {
+    display: none;
+  }
+}
+
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background: url(../images/top.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+}
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 3.8rem;
+  letter-spacing: 7px;
+}
+
+@media (min-width: 550px) {
+  .top-wrapper h1 {
+    font-size: 7rem;
+  }
+}
+
+#team_player_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #DEDEDE;
+}
+
+@media (min-width: 550px) {
+  #team_player_area {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+#team_player_area .team,
+#team_player_area .player {
+  background-color: #DEDEDE;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+@media (min-width: 550px) {
+  #team_player_area .team,
+  #team_player_area .player {
+    width: calc(100% / 2);
+  }
+}
+
+#team_player_area .team .title,
+#team_player_area .player .title {
+  color: black;
+}
+
+#team_player_area .team .title span,
+#team_player_area .player .title span {
+  display: block;
+  font-size: 14px;
+}
+
+#team_player_area .team .team_box,
+#team_player_area .team .player_box,
+#team_player_area .player .team_box,
+#team_player_area .player .player_box {
+  background-color: #fff;
+  margin: 5px;
+  padding-top: 80px;
+  height: 400px;
+}
+
+#team_player_area .team .team_box .more,
+#team_player_area .team .player_box .more,
+#team_player_area .player .team_box .more,
+#team_player_area .player .player_box .more {
+  text-align: center;
+  padding-top: 250px;
+  margin: 5px;
+}
+
+#team_player_area .team .team_box .more a,
+#team_player_area .team .player_box .more a,
+#team_player_area .player .team_box .more a,
+#team_player_area .player .player_box .more a {
+  width: 120px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgba(34, 49, 52, 0.9);
+  border: 2px solid 0;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#team_player_area .team .team_box .more a:hover,
+#team_player_area .team .player_box .more a:hover,
+#team_player_area .player .team_box .more a:hover,
+#team_player_area .player .player_box .more a:hover {
+  background-color: white;
+  border: 2px solid transparent;
+  color: #EC7E2F;
+}
+
+#team_player_area .team .team_box,
+#team_player_area .player .team_box {
+  background: url(../images/erythrina_sp.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#team_player_area .team .player_box,
+#team_player_area .player .player_box {
+  background: url(../images/players.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#sns .ig-page {
+  padding: 0px 10px;
+}
+
+#sns .sns_btn {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#sns .sns_btn .sns_box {
+  margin: 20px;
+  background-color: black;
+}
+
+#sns .sns_btn .sns_box i {
+  font-size: 4.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
+  padding-top: 15px;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+}
+
+#sns .sns_btn .sns_box i:hover {
+  color: #EC7E2F;
+}
+
+#sponsor {
+  background-color: #DEDEDE;
+}
+
+#sponsor .title {
+  color: black;
+}
+
+#sponsor .title span {
+  display: block;
+  font-size: 14px;
+}
+
+#sponsor .sponsor_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 5px;
+}
+
+#sponsor .sponsor_list img {
+  border: 2px solid black;
+  margin: 5px;
+  width: 150px;
+  height: auto;
+}
+
+@media (min-width: 550px) {
+  #sponsor .sponsor_list img {
+    width: 200px;
+  }
+}
+
+#pagetop {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0.8;
+}
+
+@media (min-width: 550px) {
+  #pagetop {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+#pagetop a {
+  display: block;
+  background: #EC7E2F;
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#pagetop a:hover {
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+  background-color: black;
+  border-top: 1px solid #DEDEDE;
+  padding: 20px 0px 10px 0;
+}
+
+#team {
+  margin-bottom: 30px;
+}
+
+#team .team_discription {
+  margin: 0 auto;
+  margin-top: 90px;
+  width: 90%;
+  height: auto;
+  background: url(../images/team/erythrina.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#team .recruitment {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 90%;
+  height: auto;
+  background: url(../images/team/top.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#team .access {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 90%;
+  height: auto;
+  background: url(../images/team/american_village.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#team .box_text {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+#team .box_text .title {
+  color: black;
+  text-align: center;
+  padding: 15px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border: 5px solid black;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+
+#team .box_text .content {
+  font-size: 1.6rem;
+}
+
+#team .box_text .content img {
+  width: 250px;
+  height: auto;
+  border: 3px solid black;
+}
+
+#team .box_text .content .googlemap {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#team .box_text .content .googlemap .inner {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+}
+
+#team .box_text .content .googlemap .inner iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#team .box_text .content .history {
+  font-size: 1.4rem;
+}
+
+.player_page {
+  background-image: url(../images/araha_beach.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title_player {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0;
+  border: 5px solid black;
+  width: 300px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+
+#player {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#player .profile_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+}
+
+@media (min-width: 550px) {
+  #player .profile_box {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    padding: 10px;
+    margin: 20px;
+  }
+}
+
+#player .profile_box .profile_img {
+  width: 50%;
+}
+
+#player .profile_box img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.profile_detail {
+  width: 50%;
+  margin-left: 5px;
+}
+
+.profile_detail .name_txt {
+  border-bottom: 3px solid #DEDEDE;
+  margin-bottom: 10px;
+}
+
+.profile_detail .name_txt .number {
+  font-size: 300%;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile_detail .name_txt .number span {
+  font-size: 15px;
+  padding-left: 2px;
+}
+
+.profile_detail .name_txt .position {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.profile_detail .name_txt .name_jp {
+  margin-top: 2px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 0.8;
+  margin-bottom: 0;
+}
+
+.profile_detail .name_txt .name_en {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+}
+
+.profile_detail .personal_txt {
+  font-size: 11px;
+  text-align: left;
+}
+
+@media (min-width: 550px) {
+  .profile_detail .personal_txt {
+    font-size: 16px;
+  }
+}
+
+.sponsor_page {
+  background-image: url(../images/araha_beach.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title_sponsor {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0;
+  width: 300px;
+  border: 5px solid black;
+  text-align: center;
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+
+#sponsor_wrapper {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#sponsor_wrapper .sponsor1,
+#sponsor_wrapper .sponsor2,
+#sponsor_wrapper .sponsor3,
+#sponsor_wrapper .sponsor4,
+#sponsor_wrapper .sponsor5,
+#sponsor_wrapper .sponsor6 {
+  border: solid 1px black;
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+}
+
+@media (min-width: 550px) {
+  #sponsor_wrapper .sponsor1,
+  #sponsor_wrapper .sponsor2,
+  #sponsor_wrapper .sponsor3,
+  #sponsor_wrapper .sponsor4,
+  #sponsor_wrapper .sponsor5,
+  #sponsor_wrapper .sponsor6 {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    padding: 10px;
+    margin: 20px;
+  }
+}
+
+#sponsor_wrapper .sponsor1 img,
+#sponsor_wrapper .sponsor2 img,
+#sponsor_wrapper .sponsor3 img,
+#sponsor_wrapper .sponsor4 img,
+#sponsor_wrapper .sponsor5 img,
+#sponsor_wrapper .sponsor6 img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid black;
+}
+
+#sponsor_wrapper .sponsor1 .content,
+#sponsor_wrapper .sponsor2 .content,
+#sponsor_wrapper .sponsor3 .content,
+#sponsor_wrapper .sponsor4 .content,
+#sponsor_wrapper .sponsor5 .content,
+#sponsor_wrapper .sponsor6 .content {
+  text-align: left;
+  font-size: 16px;
+}
+
+#sponsor_wrapper .ad {
+  border: solid 4px black;
+  background-color: #DEDEDE;
+  margin: 10px;
+  padding: 10px;
+  width: 80%;
+}
+
+#sponsor_wrapper .ad p {
+  font-size: 18px;
+}
+
+@media (min-width: 550px) {
+  #sponsor_wrapper .banner img:hover {
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+    cursor: pointer;
+  }
+}
+
+.contact_page {
+  background-image: url(../images/araha_beach.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  min-height: 100vh;
+}
+
+#contact {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  margin-top: 140px;
+  font-size: 20px;
+}
+
+#contact dt {
+  margin: 5px 0 10px 0;
+}
+
+#contact dd {
+  margin: 0px;
+}
+
+#contact .text_box {
+  width: 300px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/*# sourceMappingURL=style.css.map */
